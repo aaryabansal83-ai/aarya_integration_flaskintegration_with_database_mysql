@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User's Home</title>
+    <link rel="stylesheet" href="../static/dashboard.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+         <nav class="navbar">
+            <div class="features">
+                <div class="home"><a href="/dashboard_home">Home</a></div>
+                <div class="about"><a href="/dashboard_about">About</a></div>
+                <div class="contact"><a href="/dashboard_contact">Contact</a></div>
+            </div>
+            <div class="logout"><a href="/logout">Logout</a> </div>
+        </nav>
+
+
+        <!-- Welcome message -->
+        <h1 style="margin-top: 20px;">Welcome, {{ username }} 👋</h1>
+        
+
+        <!-- Users Data -->
+        <h2 style="margin-left: 30px;">Registered Users</h2>
+        <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+                <tr>
+                    <th style="padding: 5px 0;">ID</th>
+                    <th style="padding: 5px 0;">Username</th>
+                    <th style="padding: 5px 0;">Joined At</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.user_id }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.created_at }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

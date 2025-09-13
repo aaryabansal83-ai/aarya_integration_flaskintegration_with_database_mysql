@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="../static/dashboard.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="features">
+                <div class="home"><a href="/dashboard_home">Home</a></div>
+                <div class="about"><a href="/dashboard_about">About</a></div>
+                <div class="contact"><a href="/dashboard_contact">Contact</a></div>
+            </div>
+            <div class="logout"><a href="/logout">Logout</a> </div>
+        </nav>
+        <!-- Contact Content -->
+        <div class="contact-section">
+            <h1>Contact Me</h1>
+            <p>If you'd like to get in touch, feel free to reach out through the details below:</p>
+
+            <div class="contact-info">
+                <p><strong>Email:</strong> abhishek@gmail.com</p>
+                <p><strong>Phone:</strong> +91 9876543210</p>
+                <p><strong>Location:</strong> Lucknow, India</p>
+            </div>
+
+            <h2>Send a Message</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
